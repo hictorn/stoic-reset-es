@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pensamiento Estoico – El Poder de No Reaccionar</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+  :root { --accent: #C8F135; }
+  .font-serif-display { font-family: 'Playfair Display', serif; }
+  .text-accent { color: var(--accent); }
+  .bg-accent { background-color: var(--accent); }
+  .border-accent { border-color: var(--accent); }
+  @keyframes pulse-glow {
+    0%,100% { box-shadow: 0 8px 28px rgba(200,241,53,0.1); }
+    50% { box-shadow: 0 14px 40px rgba(200,241,53,0.2); transform: scale(1.015); }
+  }
+  .btn-pulse { animation: pulse-glow 2.8s infinite; }
+  @keyframes shine {
+    0% { left: -100%; }
+    18% { left: 200%; }
+    100% { left: 200%; }
+  }
+  .btn-shine::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 50%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+    transform: skewX(-22deg);
+    animation: shine 3.8s infinite;
+  }
+  .reveal { opacity: 0; transform: translateY(32px); transition: all 0.9s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.active { opacity: 1; transform: translateY(0); }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::after { content: '+'; color: var(--accent); font-size: 1.5rem; font-weight: 300; transition: transform 0.3s; flex-shrink: 0; }
+  details[open] summary::after { transform: rotate(45deg); color: #fff; }
+</style>
+</head>
+<body class="bg-[#111111] text-white antialiased overflow-x-hidden">
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-[#111111]/80 backdrop-blur-md border-b border-white/5">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center">
+    <div class="flex flex-col leading-tight">
+      <span style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;">
+        <span style="color:#EDEDED;">Pensamiento</span>&nbsp;<span style="color:#C8F135;">Estoico</span>
+      </span>
+      <span style="font-size:0.62rem;font-weight:300;color:rgba(255,255,255,0.4);letter-spacing:1px;">by Stoic Reset Hub</span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="pt-16 flex flex-col">
+<section class="bg-[#111111] px-6 pt-8 sm:pt-20 pb-12 sm:pb-20 flex items-start relative overflow-hidden">
+  <div class="absolute -top-40 -left-40 w-80 h-80 bg-[#C8F135]/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-40 -right-40 w-80 h-80 bg-[#C8F135]/6 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="max-w-5xl mx-auto w-full relative z-10">
+    <div class="flex flex-col lg:flex-row gap-4 lg:gap-6 items-start">
+      <div class="flex-1 reveal active">
+        <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mb-4 justify-start pl-0">
+          <span class="text-xs font-semibold tracking-widest uppercase text-slate-500 whitespace-nowrap">Para quienes piensan demasiado</span>
+          <span class="text-xs font-bold tracking-widest uppercase text-accent whitespace-nowrap">y ya están hartos</span>
+        </div>
+        <h1 class="font-serif-display text-[2.75rem] sm:text-6xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight mb-6 text-left">
+          <span>Deja de querer</span><br>
+          <span class="text-accent italic">controlarlas.</span>
+        </h1>
+        <p class="text-base sm:text-lg text-slate-400 leading-relaxed mb-8 max-w-lg text-left">
+          La guía práctica para silenciar el ruido mental, ignorar las provocaciones y recuperar tu autorrespeto, de una vez por todas.
+        </p>
+        <div class="flex flex-wrap gap-3 sm:gap-5 mb-4 sm:mb-8 justify-start">
+          <div class="flex items-center gap-2 text-slate-400 text-sm"><span>📖 Guía en PDF</span></div>
+          <div class="flex items-center gap-2 text-slate-400 text-sm"><span>⚡ Acceso inmediato</span></div>
+          <div class="flex items-center gap-2 text-slate-400 text-sm"><span>💎 Contenido original</span></div>
+          <div class="flex items-center gap-2 text-slate-400 text-sm"><span>♾️ Acceso de por vida</span></div>
+        </div>
+        <div class="flex flex-col items-start w-full">
+          <div class="flex flex-col items-center w-full sm:w-auto">
+            <a href="https://pay.hotmart.com/I107074305W?checkoutMode=10" target="_blank" class="w-full sm:w-auto block">
+              <button class="btn-pulse btn-shine relative overflow-hidden h-14 w-full sm:w-auto sm:h-16 px-6 sm:px-12 text-[13.5px] sm:text-lg font-bold bg-accent hover:brightness-110 text-black rounded-full shadow-lg shadow-[#C8F135]/8 transition-all duration-300 hover:scale-105">
+                <span class="sm:hidden">SÍ, QUIERO RECUPERAR MI PAZ →</span>
+                <span class="hidden sm:inline">SÍ, QUIERO RECUPERAR MI PAZ →</span>
+              </button>
+            </a>
+            <p class="text-slate-500 text-xs mt-3">Pago único · Sin suscripción · Checkout seguro</p>
+          </div>
+        </div>
+      </div>
+      <div class="hidden lg:flex w-full lg:w-[400px] flex-shrink-0 self-stretch flex-col justify-center reveal active">
+        <img src="./assets/images/mockup.png" alt="Mockup del ebook Pensamiento Estoico" style="width:100%;max-width:400px;height:auto;object-fit:contain;filter:drop-shadow(0 32px 56px rgba(0,0,0,0.5)) drop-shadow(0 0 40px rgba(200,241,53,0.08));">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUÉ INCLUYE -->
+<section class="bg-[#0d0d0d] pt-10 sm:pt-16 px-6 pb-12 sm:pb-20 border-t border-white/5 relative overflow-hidden">
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-accent/4 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="text-center mb-6 sm:mb-12 reveal">
+      <span class="inline-block text-[11px] font-semibold tracking-widest uppercase text-accent mb-3 opacity-75">¿QUÉ INCLUYE?</span>
+      <h2 class="font-serif-display text-3xl sm:text-5xl font-bold text-white leading-tight tracking-tight">Domina tu mente, <span class="text-accent">no solo tus reacciones.</span></h2>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-5 items-stretch">
+      <div class="bg-white/[0.03] rounded-2xl p-6 sm:p-8 h-full reveal" style="border:1px solid rgba(200,241,53,0.18);">
+        <div class="mb-8">
+          <h3 class="text-2xl sm:text-3xl font-bold text-white leading-tight tracking-tight">Lo que <span class="text-accent">vas a aprender</span></h3>
+          <p class="text-slate-400 text-sm mt-2 leading-relaxed">Directo al grano. Práctico y objetivo</p>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-[#1a2a0f] flex items-center justify-center flex-shrink-0 mt-0.5" style="border:1px solid rgba(200,241,53,0.18);"><svg viewBox="0 0 12 12" fill="none" style="width:10px;height:10px;"><path d="M2 6l3 3 5-5" stroke="#C8F135" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="text-slate-300 text-sm leading-snug">Dejar de permitir que pequeñas provocaciones arruinen todo tu día</span></li>
+          <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-[#1a2a0f] flex items-center justify-center flex-shrink-0 mt-0.5" style="border:1px solid rgba(200,241,53,0.18);"><svg viewBox="0 0 12 12" fill="none" style="width:10px;height:10px;"><path d="M2 6l3 3 5-5" stroke="#C8F135" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="text-slate-300 text-sm leading-snug">La regla de los 3 segundos: dominar el espacio entre el estímulo y la reacción</span></li>
+          <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-[#1a2a0f] flex items-center justify-center flex-shrink-0 mt-0.5" style="border:1px solid rgba(200,241,53,0.18);"><svg viewBox="0 0 12 12" fill="none" style="width:10px;height:10px;"><path d="M2 6l3 3 5-5" stroke="#C8F135" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="text-slate-300 text-sm leading-snug">Establecer límites personales claros, sin culpa y sin drama</span></li>
+          <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-[#1a2a0f] flex items-center justify-center flex-shrink-0 mt-0.5" style="border:1px solid rgba(200,241,53,0.18);"><svg viewBox="0 0 12 12" fill="none" style="width:10px;height:10px;"><path d="M2 6l3 3 5-5" stroke="#C8F135" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="text-slate-300 text-sm leading-snug">Silenciar el ruido mental nocturno y dormir con la mente en calma</span></li>
+          <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-[#1a2a0f] flex items-center justify-center flex-shrink-0 mt-0.5" style="border:1px solid rgba(200,241,53,0.18);"><svg viewBox="0 0 12 12" fill="none" style="width:10px;height:10px;"><path d="M2 6l3 3 5-5" stroke="#C8F135" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="text-slate-300 text-sm leading-snug">Dejar de buscar validación y recuperar el autorrespeto</span></li>
+          <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-[#1a2a0f] flex items-center justify-center flex-shrink-0 mt-0.5" style="border:1px solid rgba(200,241,53,0.18);"><svg viewBox="0 0 12 12" fill="none" style="width:10px;height:10px;"><path d="M2 6l3 3 5-5" stroke="#C8F135" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="text-slate-300 text-sm leading-snug">Aplicar principios estoicos a las relaciones modernas y a los conflictos cotidianos</span></li>
+          <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-[#1a2a0f] flex items-center justify-center flex-shrink-0 mt-0.5" style="border:1px solid rgba(200,241,53,0.18);"><svg viewBox="0 0 12 12" fill="none" style="width:10px;height:10px;"><path d="M2 6l3 3 5-5" stroke="#C8F135" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="text-slate-300 text-sm leading-snug">Elegir la paz en lugar de agotarte queriendo ganar cada discusión</span></li>
+          <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-[#1a2a0f] flex items-center justify-center flex-shrink-0 mt-0.5" style="border:1px solid rgba(200,241,53,0.18);"><svg viewBox="0 0 12 12" fill="none" style="width:10px;height:10px;"><path d="M2 6l3 3 5-5" stroke="#C8F135" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="text-slate-300 text-sm leading-snug">Construir una resiliencia duradera que no se debilite cuando las cosas se pongan difíciles</span></li>
+        </ul>
+      </div>
+      <div class="flex flex-col reveal">
+        <div class="mb-4 text-center sm:text-left">
+          <h3 class="text-2xl sm:text-3xl font-bold text-white px-4 sm:px-0">¿Para quién <span class="text-accent">es</span>?</h3>
+          <p class="text-slate-400 text-xs sm:text-sm mt-2">Si te reconoces en alguno de estos perfiles.</p>
+        </div>
+        <div class="group flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white/[0.03] hover:bg-white/[0.08] hover:shadow-lg hover:shadow-accent/10 transition-all duration-300 flex-1 mt-2 cursor-pointer" style="border:1px solid rgba(200,241,53,0.18);">
+          <div class="w-12 h-12 rounded-xl bg-[#1a2a0f] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 text-xl" style="border:1px solid rgba(200,241,53,0.18);">🧠</div>
+          <div><p class="text-white font-semibold text-base">Quien piensa demasiado</p><p class="text-slate-500 text-sm leading-relaxed mt-1">Silencia el ruido. Recupera tu enfoque y tu energía mental</p></div>
+        </div>
+        <div class="group flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white/[0.03] hover:bg-white/[0.08] hover:shadow-lg hover:shadow-accent/10 transition-all duration-300 flex-1 mt-2 cursor-pointer" style="border:1px solid rgba(200,241,53,0.18);">
+          <div class="w-12 h-12 rounded-xl bg-[#1a2a0f] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 text-xl" style="border:1px solid rgba(200,241,53,0.18);">😤</div>
+          <div><p class="text-white font-semibold text-base">Quien siempre reacciona</p><p class="text-slate-500 text-sm leading-relaxed mt-1">Deja de ser esclavo de los estados de ánimo y las palabras de los demás</p></div>
+        </div>
+        <div class="group flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white/[0.03] hover:bg-white/[0.08] hover:shadow-lg hover:shadow-accent/10 transition-all duration-300 flex-1 mt-2 cursor-pointer" style="border:1px solid rgba(200,241,53,0.18);">
+          <div class="w-12 h-12 rounded-xl bg-[#1a2a0f] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 text-xl" style="border:1px solid rgba(200,241,53,0.18);">🕊️</div>
+          <div><p class="text-white font-semibold text-base">Quien busca paz interior</p><p class="text-slate-500 text-sm leading-relaxed mt-1">Elige la soberanía emocional en lugar del drama sin fin</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS / RESULTADOS -->
+<section class="bg-[#111111] pt-10 sm:pt-16 px-6 pb-12 sm:pb-20 border-t border-white/5 relative overflow-hidden">
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-accent/4 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="text-center mb-6 sm:mb-12 reveal">
+      <span class="inline-block text-[11px] font-semibold tracking-widest uppercase text-accent mb-3 opacity-75">RESULTADOS</span>
+      <h2 class="font-serif-display text-[1.6rem] sm:text-5xl font-bold text-white tracking-tight leading-tight mb-3">Cambios reales<br class="sm:hidden"> <span class="text-accent">de lectores reales</span></h2>
+      <p class="text-slate-500 text-sm">De personas que aplicaron el método y transformaron su relación con el mundo</p>
+    </div>
+    <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-6 sm:mb-12 reveal">
+      <div class="text-center p-3 sm:p-6 bg-white/[0.03] rounded-2xl flex flex-col items-center justify-center" style="border:1px solid rgba(200,241,53,0.18);">
+        <p class="text-xl sm:text-4xl font-bold text-accent leading-tight">Cero relleno</p>
+        <p class="text-slate-400 text-xs sm:text-sm mt-1">Directo al grano</p>
+      </div>
+      <div class="text-center p-3 sm:p-6 bg-white/[0.03] rounded-2xl flex flex-col items-center justify-center" style="border:1px solid rgba(200,241,53,0.18);">
+        <p class="text-xl sm:text-4xl font-bold text-accent leading-tight">€9.99</p>
+        <p class="text-slate-400 text-xs sm:text-sm mt-1">Pago único</p>
+      </div>
+      <div class="text-center p-3 sm:p-6 bg-white/[0.03] rounded-2xl flex flex-col items-center justify-center" style="border:1px solid rgba(200,241,53,0.18);">
+        <p class="text-xl sm:text-4xl font-bold text-accent leading-tight">4.9★</p>
+        <p class="text-slate-400 text-xs sm:text-sm mt-1">Valoración</p>
+      </div>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-5">
+      <div class="bg-white/[0.03] rounded-2xl p-6 flex flex-col gap-4 reveal" style="border:1px solid rgba(200,241,53,0.18);">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-[10px] font-semibold px-3 py-1 rounded-full tracking-widest uppercase" style="border:1px solid rgba(200,241,53,0.5);color:#C8F135;background:rgba(200,241,53,0.06);">COMPRA VERIFICADA</span>
+            <span style="color:#FFD700;font-size:0.85rem;letter-spacing:2px;">★★★★★</span>
+          </div>
+        <p class="text-slate-300 text-sm leading-relaxed italic">"Compré el ebook por pura curiosidad, pero la verdad es que me sorprendió. Lo que más me impactó fue lo prácticos que son los ejemplos. Nada de teoría complicada, sino ideas claras que reconoces al instante en el día a día. Sobre todo en conversaciones donde antes reaccionaba demasiado rápido."</p>
+        <div class="mt-auto pt-4 flex items-center gap-3" style="border-top:1px solid rgba(200,241,53,0.3);">
+          <img src="./assets/images/thomas.jpg" style="width:36px;height:36px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+          <div><p class="text-white text-sm font-semibold">Alejandro R.</p><p class="text-slate-500 text-xs">Gerente de proyectos · Madrid</p></div>
+        </div>
+      </div>
+      <div class="bg-white/[0.03] rounded-2xl p-6 flex flex-col gap-4 reveal" style="border:1px solid rgba(200,241,53,0.18);">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-[10px] font-semibold px-3 py-1 rounded-full tracking-widest uppercase" style="border:1px solid rgba(200,241,53,0.5);color:#C8F135;background:rgba(200,241,53,0.06);">ACCESO ANTICIPADO</span>
+            <span style="color:#FFD700;font-size:0.85rem;letter-spacing:2px;">★★★★★</span>
+          </div>
+        <p class="text-slate-300 text-sm leading-relaxed italic">"Lo que más me gustó de este ebook es su tono calmado y directo. No se siente como una guía de autoayuda común, sino más bien como un espejo claro. Mientras leía, noté cuánta energía había estado invirtiendo en reacciones innecesarias. Muy valioso, sobre todo si quieres volver a sentirte estable por dentro."</p>
+        <div class="mt-auto pt-4 flex items-center gap-3" style="border-top:1px solid rgba(200,241,53,0.3);">
+          <img src="./assets/images/sabine.jpg" style="width:36px;height:36px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+          <div><p class="text-white text-sm font-semibold">Carmen L.</p><p class="text-slate-500 text-xs">Profesora · Barcelona</p></div>
+        </div>
+      </div>
+      <div class="bg-white/[0.03] rounded-2xl p-6 flex flex-col gap-4 reveal" style="border:1px solid rgba(200,241,53,0.18);">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-[10px] font-semibold px-3 py-1 rounded-full tracking-widest uppercase" style="border:1px solid rgba(200,241,53,0.5);color:#C8F135;background:rgba(200,241,53,0.06);">COMPRA VERIFICADA</span>
+            <span style="color:#FFD700;font-size:0.85rem;letter-spacing:2px;">★★★★★</span>
+          </div>
+        <p class="text-slate-300 text-sm leading-relaxed italic">"La parte sobre la distancia emocional fue para mí lo más importante. No se trata de volverte frío ni indiferente, sino de aprender por fin a no responder de inmediato a cada impulso. Justo eso es lo que hace tan útil este ebook: se mantiene práctico, calmado y aun así muy certero."</p>
+        <div class="mt-auto pt-4 flex items-center gap-3" style="border-top:1px solid rgba(200,241,53,0.3);">
+          <img src="./assets/images/markus.jpg" style="width:36px;height:36px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+          <div><p class="text-white text-sm font-semibold">Pablo M.</p><p class="text-slate-500 text-xs">Autónomo · Sevilla</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / OFERTA - 2 columnas -->
+<section class="bg-[#0d0d0d] pt-10 sm:pt-16 px-6 pb-12 sm:pb-20 border-t border-white/5 relative overflow-hidden" id="offer">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="max-w-5xl mx-auto relative z-10 reveal">
+    <h2 class="font-serif-display text-[1.6rem] sm:text-5xl font-bold text-white leading-tight mb-6 text-center">
+      Deja de regalar tu<br class="sm:hidden"><span class="hidden sm:inline"> </span><span class="text-accent italic">paz interior.</span>
+    </h2>
+    <p class="text-slate-400 text-base sm:text-lg leading-relaxed mb-8 sm:mb-10 max-w-xl mx-auto text-center">
+      Por el precio de un café, obtienes la guía práctica para recuperar tu soberanía emocional. Deja de volver a lo que te hace daño.
+    </p>
+
+    <div class="flex lg:hidden justify-center mt-2 mb-8">
+      <img src="./assets/images/mockup.png" alt="Mockup del ebook Pensamiento Estoico" style="width:75%;max-width:380px;height:auto;object-fit:contain;filter:drop-shadow(0 24px 40px rgba(0,0,0,0.5)) drop-shadow(0 0 30px rgba(200,241,53,0.08));">
+    </div>
+    <div class="flex flex-col lg:flex-row gap-16 items-center justify-center max-w-4xl mx-auto">
+
+      <!-- Izquierda: QUÉ RECIBES -->
+      <div class="w-full lg:w-80 flex-shrink-0 flex flex-col gap-3 items-center lg:items-start">
+        <p class="text-xs font-semibold tracking-widest uppercase text-accent opacity-75">QUÉ RECIBES</p>
+        <ul class="space-y-4">
+          <li class="flex items-center gap-3 text-slate-300 text-sm whitespace-nowrap"><span class="w-5 h-5 rounded-full bg-[#1a2a0f] flex items-center justify-center flex-shrink-0" style="border:1px solid rgba(200,241,53,0.18);"><svg viewBox="0 0 12 12" fill="none" style="width:10px;height:10px;"><path d="M2 6l3 3 5-5" stroke="#C8F135" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>La guía táctica completa (PDF)</li>
+          <li class="flex items-center gap-3 text-slate-300 text-sm whitespace-nowrap"><span class="w-5 h-5 rounded-full bg-[#1a2a0f] flex items-center justify-center flex-shrink-0" style="border:1px solid rgba(200,241,53,0.18);"><svg viewBox="0 0 12 12" fill="none" style="width:10px;height:10px;"><path d="M2 6l3 3 5-5" stroke="#C8F135" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Cero relleno · Práctico y objetivo</li>
+          <li class="flex items-center gap-3 text-slate-300 text-sm whitespace-nowrap"><span class="w-5 h-5 rounded-full bg-[#1a2a0f] flex items-center justify-center flex-shrink-0" style="border:1px solid rgba(200,241,53,0.18);"><svg viewBox="0 0 12 12" fill="none" style="width:10px;height:10px;"><path d="M2 6l3 3 5-5" stroke="#C8F135" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Acceso de por vida · Lee donde sea</li>
+          <li class="flex items-center gap-3 text-slate-300 text-sm whitespace-nowrap"><span class="w-5 h-5 rounded-full bg-[#1a2a0f] flex items-center justify-center flex-shrink-0" style="border:1px solid rgba(200,241,53,0.18);"><svg viewBox="0 0 12 12" fill="none" style="width:10px;height:10px;"><path d="M2 6l3 3 5-5" stroke="#C8F135" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Pago único. Sin costos ocultos</li>
+        </ul>
+        <p class="text-slate-500 text-xs italic whitespace-nowrap">Entrega segura. Listo para leer en menos de 60 segundos.</p>
+      </div>
+
+      <!-- Derecha: caja de precio + botón -->
+      <div class="w-full lg:w-[420px] flex-shrink-0">
+        <div class="bg-[#0a0a0a] rounded-2xl p-6 sm:p-8 flex flex-col gap-4" style="border:1px solid rgba(200,241,53,0.08);">
+          <div>
+            <span class="text-[10px] font-semibold px-3 py-1 rounded-full tracking-widest uppercase" style="border:1px solid rgba(200,241,53,0.5);color:#C8F135;background:rgba(200,241,53,0.06);">Oferta especial</span>
+          </div>
+          <p class="text-slate-500 text-lg line-through mt-1">€15.86</p>
+          <div class="flex items-baseline gap-2 -mt-1">
+            <span class="text-6xl sm:text-7xl font-extrabold text-white leading-none">€9.99</span>
+          </div>
+          <a href="https://pay.hotmart.com/I107074305W?checkoutMode=10" target="_blank" class="w-full mt-2">
+            <button class="btn-pulse btn-shine relative overflow-hidden w-full h-14 sm:h-14 text-[11.5px] sm:text-[15px] font-bold bg-accent hover:brightness-110 text-black rounded-xl shadow-lg shadow-[#C8F135]/10 transition-all duration-300 hover:scale-105 px-4 leading-none">
+              <span class="sm:hidden">SÍ, QUIERO RECUPERAR MI PAZ</span>
+              <span class="hidden sm:inline">SÍ, QUIERO RECUPERAR MI PAZ →</span>
+            </button>
+          </a>
+          <div class="flex items-center justify-center gap-2 rounded-xl py-4 px-6 mt-1 sm:justify-center" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);">
+            <span class="text-base flex-shrink-0 sm:ml-0 -ml-4">🛡</span>
+            <p class="text-white text-xs font-semibold text-center sm:text-center text-left">Pago 100% seguro<br>Sin suscripción</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="bg-[#0d0d0d] pt-10 sm:pt-16 px-6 pb-12 sm:pb-20 border-t border-white/5">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-6 sm:mb-12 reveal">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Preguntas frecuentes</h2>
+    </div>
+    <div class="space-y-3" id="faq">
+      <details class="bg-white/[0.03] rounded-2xl px-6 reveal" style="border:1px solid rgba(200,241,53,0.18);">
+        <summary class="py-5 font-semibold text-white cursor-pointer flex justify-between items-center gap-3 list-none">💳 ¿Cuánto cuesta?</summary>
+        <div class="pb-5 text-slate-400 text-sm leading-relaxed">La guía cuesta un pago único de €9.99. Sin costos ocultos, sin cobros recurrentes, sin suscripción. Pagas una vez y es tuya para siempre.</div>
+      </details>
+      <details class="bg-white/[0.03] rounded-2xl px-6 reveal" style="border:1px solid rgba(200,241,53,0.18);">
+        <summary class="py-5 font-semibold text-white cursor-pointer flex justify-between items-center gap-3 list-none">💰 ¿Qué métodos de pago aceptan?</summary>
+        <div class="pb-5 text-slate-400 text-sm leading-relaxed">Puedes pagar de forma segura con las principales tarjetas de crédito y débito (Visa, Mastercard, AMEX, Discover), así como con Apple Pay, Google Pay y PayPal en la mayoría de las regiones.</div>
+      </details>
+      <details class="bg-white/[0.03] rounded-2xl px-6 reveal" style="border:1px solid rgba(200,241,53,0.18);">
+        <summary class="py-5 font-semibold text-white cursor-pointer flex justify-between items-center gap-3 list-none">🔐 ¿Es seguro el pago?</summary>
+        <div class="pb-5 text-slate-400 text-sm leading-relaxed">Sí. El pago se procesa con cifrado SSL, el mismo estándar que usan los principales bancos. Nunca vemos ni almacenamos los datos de tu tarjeta.</div>
+      </details>
+      <details class="bg-white/[0.03] rounded-2xl px-6 reveal" style="border:1px solid rgba(200,241,53,0.18);">
+        <summary class="py-5 font-semibold text-white cursor-pointer flex justify-between items-center gap-3 list-none">⚡ ¿Cuánto tarda en llegarme el acceso?</summary>
+        <div class="pb-5 text-slate-400 text-sm leading-relaxed">Inmediato. En cuanto se completa la compra, aparece un enlace de descarga en pantalla y se envía en tiempo real a tu correo electrónico.</div>
+      </details>
+      <details class="bg-white/[0.03] rounded-2xl px-6 reveal" style="border:1px solid rgba(200,241,53,0.18);">
+        <summary class="py-5 font-semibold text-white cursor-pointer flex justify-between items-center gap-3 list-none">📱 ¿Puedo leerlo en el celular o la tableta?</summary>
+        <div class="pb-5 text-slate-400 text-sm leading-relaxed">Claro. El PDF es totalmente compatible con iPhone, Android, iPad, Kindle y cualquier computadora, desde cualquier navegador o lector de PDF estándar.</div>
+      </details>
+      <details class="bg-white/[0.03] rounded-2xl px-6 reveal" style="border:1px solid rgba(200,241,53,0.18);">
+        <summary class="py-5 font-semibold text-white cursor-pointer flex justify-between items-center gap-3 list-none">🔁 ¿Tendré que volver a pagar en el futuro?</summary>
+        <div class="pb-5 text-slate-400 text-sm leading-relaxed">No. Compra única, acceso de por vida. Una vez descargado, es tuyo para siempre, sin costos futuros.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="w-full border-t border-white/5 py-8 px-6 text-center bg-[#0a0a0a]">
+  <p class="text-slate-600 text-xs mb-2">Pensamiento Estoico © <span id="yr">2026</span> · by Stoic Reset Hub</p>
+  <p class="text-slate-700 text-xs max-w-xl mx-auto leading-relaxed">Este sitio no está afiliado ni respaldado por Facebook, Instagram, Google ni ninguna otra plataforma.<br>Los resultados pueden variar.</p>
+</footer>
+
+</div>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+const reveals = document.querySelectorAll('.reveal:not(.active)');
+if ('IntersectionObserver' in window) {
+  const obs = new IntersectionObserver((entries, o) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('active'); o.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => obs.observe(el));
+} else {
+  reveals.forEach(el => el.classList.add('active'));
+}
+const urlParams = new URLSearchParams(window.location.search);
+const utmKeys = ['utm_source','utm_campaign','utm_medium','utm_content','utm_term'];
+const utmParams = {};
+utmKeys.forEach(k => { const v = urlParams.get(k); if (v) utmParams[k] = v; });
+if (Object.keys(utmParams).length) {
+  document.querySelectorAll('a[href*="hotmart.com"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const dest = new URL(this.href);
+      Object.entries(utmParams).forEach(([k, v]) => dest.searchParams.set(k, v));
+      window.location.href = dest.toString();
+    });
+  });
+}
+</script>
+</body>
+</html>
