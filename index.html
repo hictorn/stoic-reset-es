@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BQY7DVLEL1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BQY7DVLEL1');
+</script>
 <title>Pensamiento Estoico – El Poder de No Reaccionar</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -314,6 +321,19 @@ if ('IntersectionObserver' in window) {
 } else {
   reveals.forEach(el => el.classList.add('active'));
 }
+document.querySelectorAll('a[href*="pay.hotmart.com/"]').forEach((link, index) => {
+  const ctaPositions = ['hero_top', 'offer_bottom'];
+  link.addEventListener('click', () => {
+    gtag('event', 'hotmart_checkout_click', {
+      language: 'es',
+      ebook: 'pensamiento_estoico',
+      cta_position: ctaPositions[index] || 'unknown',
+      page_location: window.location.href,
+      destination: link.href,
+      transport_type: 'beacon'
+    });
+  });
+});
 const urlParams = new URLSearchParams(window.location.search);
 const utmKeys = ['utm_source','utm_campaign','utm_medium','utm_content','utm_term'];
 const utmParams = {};
